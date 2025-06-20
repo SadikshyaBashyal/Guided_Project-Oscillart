@@ -10,6 +10,52 @@ var timepernote = 0;
 var length = 0;
 const color_picker = document.getElementById('color');
 const vol_slider = document.getElementById('vol-slider');
+const recording_toggle = document.getElementById('record');
+
+var blob, recorder = null;
+var chunks = [];
+
+function startRecording(){
+    const canvasStream = canvas.captureStream(20); // Frame rate of canvas
+    const audioDestination = audioCtx.createMediaStreamDestination();
+    gainNode.connect(audioDestination)
+    canvasStream.getVideoTracks().forEach(track => combinedStream.addTrack(track));
+    audioDestination.stream.getAudioTracks().forEach(track => combinedStream.addTrack(track));
+    const combinedStream = new MediaStream();
+    recorder = new MediaRecorder(combinedStream, {mimeType: 'video/webm'});
+    recorder.ondataavailable = e => {
+        if (e.data.size > 0) {
+        chunks.push(e.data);
+        }
+        };
+
+
+    recorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'recording.webm';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
+    recorder.start();
+}
+
+var is_recording = false;
+function toggle(){
+    is_recording = !is_recording;
+    if(is_recording){
+        recording_toggle.innerHTML = "Stop Recording";
+        startRecording();
+
+    }else{
+        recording_toggle.innerHTML = "Start Recording";
+        recorder.stop();
+    }
+
+}
 
 function line(){
     y = height/2 + vol_slider.value * Math.sin(x * 2  * Math.PI * freq * (0.5 * length));
