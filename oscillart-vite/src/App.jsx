@@ -5,10 +5,10 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Oscillart-Play/">
       <Navbar />
       <Routes>
-        <Route path="/Oscillart-Play/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
       </Routes>
     </Router>
   );
