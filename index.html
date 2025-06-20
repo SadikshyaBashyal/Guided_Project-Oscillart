@@ -8,16 +8,17 @@
 <body>
     <div id = "container">
         <canvas id = "canvas">
-
-            
         </canvas>
+        <div id="note-buttons"></div>
         
         <input type= "text" id = "input">
 
-        <button id= "submit" onclick="handle()">Submit me why dontcha</button>
+        <button id= "submit" onclick="handle()">Submit</button>
         <input type="color" id="color" value="#ff0000">
-        <input type="range" min="1" max="100" value="100" id="vol-slider">
+        <input type="range" min="1" max="60" value="60" id="vol-slider">
+        
         <button id = "record" onclick="toggle()">Start Recording</button>
+        <button id="stop-audio" onclick="stopAudio()">Stop Audio</button>
     </div>
     <script src="main.js"></script>
 </body>
