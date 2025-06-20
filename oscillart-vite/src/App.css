@@ -4,4 +4,16 @@
   /* padding: 2rem; */
   text-align: center;
   background: linear-gradient(to right, rgb(76, 169, 76), #1e60a7);
+  /* min-height: 100vh;
+  box-sizing: border-box; */
 }
+
+@media (max-width: 600px) {
+  #root {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(76, 169, 76), #1e60a7);
+  }
+}
+

@@ -1,5 +1,5 @@
+/* Responsive layout for Landing page */
 .landing-container {
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,17 +32,32 @@
     color: #222;
 }
 
+.landing-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
 .landing-canvas {
     display: block;
-    padding-top: 100px;
-    margin: 40px auto;
+    margin: 24px auto 16px auto;
     border: 2px solid #222;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #fff;
+    width: 90vw;
+    max-width: 500px;
+    height: 100px;
+    max-height: 200px;
+    box-sizing: border-box;
 }
 
 .note-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     margin: 24px 0 12px 0;
@@ -50,15 +65,18 @@
 
 .note-btn {
     font-size: 1.2rem;
-    padding: 0.5em 1.2em;
-    border-radius: 6px;
+    padding: 0.7em 1.5em;
+    border-radius: 8px;
     border: 2px solid #222;
     background: #e0e0e0;
     cursor: pointer;
     transition: background 0.2s, border-color 0.2s;
+    min-width: 60px;
+    min-height: 44px;
+    box-sizing: border-box;
 }
 
-.note-btn:hover {
+.note-btn:hover, .note-btn:focus {
     background: #c0ffc0;
     border-color: #1e60a7;
 }
@@ -67,17 +85,68 @@
     display: block;
     margin: 0 auto 16px auto;
     font-size: 1.1rem;
-    padding: 0.6em 1.5em;
-    border-radius: 8px;
+    padding: 0.8em 2em;
+    border-radius: 10px;
     border: 2px solid #a11f56;
     background: #f8d7da;
     color: #a11f56;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s, color 0.2s;
+    min-width: 180px;
+    min-height: 48px;
+    box-sizing: border-box;
 }
 
-.record-btn:hover {
+.record-btn:hover, .record-btn:focus {
     background: #a11f56;
     color: #fff;
+}
+
+@media (max-width: 900px) {
+    .landing-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+    }
+    .Instructions, .landing-content {
+        width: 100%;
+        min-width: 0;
+        max-width: 100vw;
+        padding: 0;
+    }
+    .landing-canvas {
+        width: 96vw;
+        max-width: 100vw;
+        height: 80px;
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .landing-container {
+        padding: 0;
+    }
+    .Instructions, .landing-content {
+        padding: 0;
+    }
+    .landing-canvas {
+        width: 100vw;
+        height: 60px;
+        max-width: 100vw;
+        max-height: 80px;
+        box-sizing: border-box;
+    }
+    .note-btn {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+        min-width: 44px;
+        min-height: 36px;
+    }
+    .record-btn {
+        font-size: 1rem;
+        padding: 0.6em 1em;
+        min-width: 120px;
+        min-height: 40px;
+    }
 }

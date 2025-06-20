@@ -5,7 +5,7 @@
     align-items: center;
     padding: 0rem;
     background: linear-gradient(to right, rgb(71, 183, 67), rgb(172, 175, 35), rgb(161, 33, 86));
-    position: fixed;
+    /* position: relative; */
     top: 0;
     z-index: 1000;
     height: 80px;
