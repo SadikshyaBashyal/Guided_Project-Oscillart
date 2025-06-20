@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/Oscillart-Play/" element={<Landing />} />
       </Routes>
     </Router>
   );
