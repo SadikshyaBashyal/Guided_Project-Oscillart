@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  background: linear-gradient(to right, rgb(76, 169, 76), #1e60a7);
+}
+
 a {
   font-weight: 500;
   color: #646cff;

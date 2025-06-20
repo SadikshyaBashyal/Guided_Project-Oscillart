@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0rem;
+    background: linear-gradient(to right, rgb(71, 183, 67), rgb(172, 175, 35), rgb(161, 33, 86));
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    margin-bottom: 50px;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-logo h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}

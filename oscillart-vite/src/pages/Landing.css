@@ -1,0 +1,83 @@
+.landing-container {
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background: transparent;
+    /* width: 100vw; */
+    /* margin-top: 30px; */
+}
+
+.landing-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* margin-top: 30px; */
+}
+
+.Instructions {
+    width: 30%;
+    min-width: 220px;
+    max-width: 350px;
+    padding: 32px 16px 0 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.landing-canvas {
+    display: block;
+    padding-top: 100px;
+    margin: 40px auto;
+    border: 2px solid #222;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.note-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 24px 0 12px 0;
+}
+
+.note-btn {
+    font-size: 1.2rem;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+    border: 2px solid #222;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.note-btn:hover {
+    background: #c0ffc0;
+    border-color: #1e60a7;
+}
+
+.record-btn {
+    display: block;
+    margin: 0 auto 16px auto;
+    font-size: 1.1rem;
+    padding: 0.6em 1.5em;
+    border-radius: 8px;
+    border: 2px solid #a11f56;
+    background: #f8d7da;
+    color: #a11f56;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.record-btn:hover {
+    background: #a11f56;
+    color: #fff;
+}

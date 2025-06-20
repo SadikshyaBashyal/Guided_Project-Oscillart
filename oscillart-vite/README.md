@@ -1,12 +1,46 @@
-# React + Vite
+# Oscillart Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Vite-based version of the Oscillart app.
 
-Currently, two official plugins are available:
+## Initial Template
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was scaffolded using the following command:
 
-## Expanding the ESLint configuration
+```sh
+npm create vite@latest oscillart-vite -- --template react
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## Installed Packages
+
+- **react**
+- **react-dom**
+- **react-router-dom**
+- **react-icons**
+- **gh-pages**
+
+```sh
+npm install react-router-dom react-icons
+npm install --save-dev gh-pages
+```
+
+These packages are required for the app's functionality and routing.
+
+## Project Structure
+
+- `src/` - Main source code directory
+- `public/` - Static assets
+
+---
+
+Feel free to update this README with more details as you develop the project.
