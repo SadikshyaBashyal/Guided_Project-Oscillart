@@ -7,7 +7,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-logo">
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
-                    <img src="/play.svg" alt="Oscillart" />
+                    <img href="/play.svg" alt="Oscillart" />
                     <h1>Oscillart Play</h1>
                 </Link>
             </div>
